@@ -18,8 +18,9 @@ const Donut = ({
   linecap = 'butt',
   indicatorStrokeWidth,
   indicatorColor = 'black',
+  reverse = false,
 }: DonutProps) => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(reverse ? 100 : 0);
   const halfSize = size * 0.5;
   const radius = halfSize - strokeWidth * 0.5;
   const circumference = 2 * Math.PI * radius;
